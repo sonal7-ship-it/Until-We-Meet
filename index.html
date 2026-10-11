@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Makes text display correctly -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the layout fit mobile screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text shown in the browser tab -->
+  <title>Until We Meet ♡</title>
+
+  <!-- Connect our CSS design file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Decorative floating hearts go here -->
+  <div class="hearts" id="hearts"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#"><h1 align = "center">♡ Until We Meet</h1></a>
+    <br>
+    <span class="top-note">A little closer every day</span>
+  </header>
+
+  <main class="container">
+    <!-- Main countdown card -->
+    <section class="hero card">
+      <p class="eyebrow">OUR LITTLE COUNTDOWN</p>
+
+      <h1>Distance means so little<br>
+        when someone means so much.</h1>
+
+      <p class="subtitle">
+        Every second brings us closer to our next hug.
+      </p>
+
+      <div class="heart-icon">♡</div>
+
+      <p class="label">TIME UNTIL WE MEET</p>
+
+      <div class="countdown">
+        <div class="time-box">
+          <strong id="days">--</strong>
+          <span>Days</span>
+        </div>
+        <div class="time-box">
+          <strong id="hours">--</strong>
+          <span>Hours</span>
+        </div>
+        <div class="time-box">
+          <strong id="minutes">--</strong>
+          <span>Minutes</span>
+        </div>
+        <div class="time-box">
+          <strong id="seconds">--</strong>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <p id="countdown-message" class="message">
+        Our next chapter is getting closer ♡
+      </p>
+
+      <form id="date-form" class="date-form">
+        <label for="meeting-date">Our next meeting date and time</label>
+        <input type="datetime-local" id="meeting-date" required>
+        <button type="submit">Save our date ♡</button>
+      </form>
+    </section>
+
+    <!-- Partner connection: demo interface -->
+    <section class="card section-card">
+      <p class="eyebrow">TWO HEARTS, ONE SPACE</p>
+      <h2>Connect with your person 💌</h2>
+      <p class="muted">
+        Create a demo invitation code or enter your partner's code.
+      </p>
+
+      <button id="create-code" type="button">
+        Create invitation code
+      </button>
+
+      <p id="my-code" class="invite-code"></p>
+
+      <form id="join-form" class="join-form">
+        <label for="partner-code">Partner's invitation code</label>
+        <input id="partner-code"
+               type="text"
+               maxlength="8"
+               placeholder="Enter their code">
+        <button type="submit">Join our space</button>
+      </form>
+
+      <p id="connection-message" class="muted" aria-live="polite"></p>
+    </section>
+
+    <!-- Love notes -->
+    <section class="card section-card">
+      <p class="eyebrow">WORDS FROM THE HEART</p>
+      <h2>Little love notes 💗</h2>
+      <p class="muted">
+        Save a message you would love your person to read.
+      </p>
+
+      <form id="note-form">
+        <label for="note-input">Your note</label>
+        <textarea id="note-input"
+                  maxlength="500"
+                  placeholder="If I could be anywhere, I'd be beside you..."
+                  required></textarea>
+        <button type="submit">Save love note ♡</button>
+      </form>
+
+      <div id="notes-list" class="notes-list"></div>
+    </section>
+
+    <!-- Photo memories -->
+    <section class="card section-card">
+      <p class="eyebrow">OUR LITTLE WORLD</p>
+      <h2>Memories together 📸</h2>
+      <p class="muted">
+        Keep a few favorite photos on this device.
+      </p>
+
+      <label class="upload-button" for="photo-input">
+        + Add a memory
+      </label>
+      <input id="photo-input"
+             type="file"
+             accept="image/*"
+             multiple
+             hidden>
+
+      <div id="photos-list" class="photos-list"></div>
+    </section>
+
+    <footer>
+      Made with love, for the days that bring us closer. ♡
+    </footer>
+  </main>
+
+  <!-- Load JavaScript after the page elements -->
+  <script src="script.js"></script>
+</body>
+</html>
